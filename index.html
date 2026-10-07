@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEEE InnovateX 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-content">
+
+    <div class="loader-top">IEEE • IAS • RAS</div>
+
+    <h1>IEEE InnovateX <span>2026</span></h1>
+    <p class="loading-text">Initializing Innovation...</p>
+
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
+    </div>
+
+    <div class="loading-info">
+      <span>LOADING</span>
+      <span id="loadingPercent">0%</span>
+    </div>
+
+  </div>
+
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="grid-lines"></div>
+</div>
+
+<!-- HEADER WITH LOGOS -->
+<header class="header">
+  <div class="container nav">
+    <div class="logos">
+      <img src="https://i.ibb.co/SXWkHMFd/image.jpg" alt="IEEE logo">
+      <img src="https://i.ibb.co/q3CJ1hJK/photo.webp" alt="IEEE IAS logo">
+      <img src="https://i.ibb.co/BVXJx9P0/image-1.jpg" alt="IEEE RAS logo">
+    </div>
+    <nav>
+      <a href="#schedule">Schedule</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#register">Register</a>
+<button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+    </nav>
+  </div>
+</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="tag">IEEE IAS &amp; RAS Presents</p>
+    <h1>IEEE InnovateX 2026</h1>
+    <p class="sub">Innovation. Technology. Future.</p>
+    <a href="#register" class="btn">Register Now</a>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule" class="section">
+  <div class="container">
+    <h2>Event Schedule</h2>
+    <div class="timeline">
+      <div class="card">
+  <span class="time">10:00 AM</span>
+  <h3>Ignite the Innovation</h3>
+  <p>Kickstart InnovateX 2026 with a welcome session, event briefing, and a glimpse of what's coming next.</p>
+</div>
+
+<div class="card">
+  <span class="time">11:00 AM</span>
+  <h3>AI, IoT &amp; The Future</h3>
+  <p>Explore how AI, IoT and robotics are transforming the way we live, work and build the future.</p>
+</div>
+
+<div class="card">
+  <span class="time">1:00 PM</span>
+  <h3>Build. Pitch. Inspire.</h3>
+  <p>Teams showcase creative solutions, smart prototypes and innovative ideas to solve real-world problems.</p>
+</div>
+
+<div class="card">
+  <span class="time">3:00 PM</span>
+  <h3>Celebrate the Innovators</h3>
+  <p>Announce the winners, celebrate achievements, and wrap up an inspiring day of innovation.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- KEYNOTE SPEAKERS -->
+<section id="speakers" class="section alt">
+  <div class="container">
+    <h2>Keynote Speakers</h2>
+    <p style="text-align:center;margin:-20px 0 30px;font-size:.85rem;color:#667;">Demo content for design purposes only</p>
+    <div class="speakers">
+      <div class="speaker">
+        <img src="https://api.dicebear.com/7.x/initials/svg?seed=Elon%20Musk" alt="Elon Musk">
+        <h3>Elon Musk</h3>
+        <span class="role">Keynote Speaker</span>
+        <p>Entrepreneur and CEO of Tesla and SpaceX, known for work in electric vehicles, space technology and AI.</p>
+      </div>
+      <div class="speaker">
+        <img src="https://api.dicebear.com/7.x/initials/svg?seed=Bill%20Gates" alt="Bill Gates">
+        <h3>Bill Gates</h3>
+        <span class="role">Technology Leader</span>
+        <p>Co-founder of Microsoft and philanthropist, a leading voice in software, technology and global innovation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- REGISTER -->
+<section id="register" class="section">
+  <div class="container narrow">
+    <h2>Register</h2>
+    <form id="regForm">
+      <label>Full Name
+        <input type="text" name="name" placeholder="Enter your name" required>
+      </label>
+
+      <label>Email
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </label>
+
+      <label>Branch
+        <input type="text" name="branch" placeholder="e.g. Computer Science" required>
+      </label>
+
+      <label>Year
+        <select name="year" required>
+          <option value="" disabled selected>Select your year</option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>4th Year</option>
+        </select>
+      </label>
+
+      <label>Roll Number
+        <input type="text" name="roll" placeholder="Enter your roll number" required>
+      </label>
+
+      <label>Phone Number
+        <input type="tel" name="phone" placeholder="10-digit phone number" pattern="[0-9]{10}" maxlength="10" required>
+      </label>
+
+      <label>Have you participated before?
+        <textarea id="answer" name="answer" rows="5" placeholder="Write your answer (maximum 100 words)" required></textarea>
+        <small id="wordCount">0 / 100 words</small>
+      </label>
+
+      <button type="submit" class="btn">Submit</button>
+      <p id="msg"></p>
+    </form>
+  </div>
+</section>
+<!-- FOOTER (provided image) -->
+<footer class="footer">
+  <img src="assets/footer.jpg" alt="IEEE InnovateX 2026 footer"
+       onerror="this.onerror=null;this.src='https://plain-apac-prod-public.komododecks.com/202609/17/MrRh7jqDYuucqnLeiKzM/image.jpg'">
+</footer>
+
+<script>
+const answer = document.getElementById('answer');
+const wordCount = document.getElementById('wordCount');
+
+function countWords(text){
+  const t = text.trim();
+  return t === '' ? 0 : t.split(/\s+/).length;
+}
+
+answer.addEventListener('input', function(){
+  let words = this.value.trim().split(/\s+/);
+  if (words.length > 100) {
+    this.value = words.slice(0, 100).join(' ');
+  }
+  wordCount.textContent = countWords(this.value) + ' / 100 words';
+});
+
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('msg').textContent = 'Thank you! Your registration is received.';
+  this.reset();
+  wordCount.textContent = '0 / 100 words';
+});
+document.getElementById('themeToggle').addEventListener('click', function(){
+
+  document.body.classList.toggle('dark');
+
+  if(document.body.classList.contains('dark')){
+    this.textContent = '☀️ Light Mode';
+  }else{
+    this.textContent = '🌙 Dark Mode';
+  }
+
+});
+
+document.getElementById('regForm').addEventListener('submit', function(e){
+
+  e.preventDefault();
+
+  const email = document.getElementById('email').value;
+  const msg = document.getElementById('msg');
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if(!emailPattern.test(email)){
+    msg.textContent = "❌ Please enter a valid email address.";
+    msg.style.color = "yellow";
+    return;
+  }
+
+   this.reset();
+});
+let percent = 0;
+
+const percentText = document.getElementById("loadingPercent");
+
+const loadingTimer = setInterval(function(){
+  percent++;
+
+  percentText.textContent = percent + "%";
+
+  if(percent >= 100){
+    clearInterval(loadingTimer);
+  }
+}, 14);
+</script>
+</script>
+</body>
+</html>
